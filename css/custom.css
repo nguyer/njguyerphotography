@@ -1,0 +1,110 @@
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+.logo {
+  height: 150px;
+  max-width: 100vh;
+}
+
+@media(min-width:768px) {
+  .intro .intro-body {
+      display: table-cell;
+      vertical-align: top;
+      padding-top: 200px;
+  }
+}
+
+
+.navbar-custom .navbar-logo {
+  visibility: hidden;
+}
+
+.navbar-custom.top-nav-collapse .navbar-logo {
+  visibility: visible;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
+}
+
+#portfolio .img-thumbnail {
+  border: none;
+  border-radius: unset;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+#portfolio .col-xs-4 {
+  padding: 0;
+}
+
+#portfolio .container {
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.large-icon {
+  font-size: 80px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+#packages h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+#packages ul {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+#packages ul li {
+  text-align: left;
+}
+
+
+#contact form {
+  text-align: left;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.form-control {
+  background-color: #000;
+  color: #fff;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+#about img {
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+}
