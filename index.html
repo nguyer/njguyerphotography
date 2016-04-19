@@ -284,8 +284,10 @@
     <script>
       $('#contactForm').submit(function(e){
         e.preventDefault();
+        var user = 'info';
+        var domain = 'njguyerphotography.com';
         $.ajax({
-            url:'https://formspree.io/nguyer@gmail.com',
+            url:'https://formspree.io/' + user + '@' + domain,
             type:'post',
             data:$('#contactForm').serialize(),
             success:function(){
