@@ -271,9 +271,6 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
@@ -293,6 +290,7 @@
         $.ajax({
             url:'https://formspree.io/' + user + '@' + domain,
             type:'post',
+            dataType: "json",
             data:$('#contactForm').serialize(),
             success:function(){
               $('#formResponse').html('<div class="alert alert-success" role="alert"><i class="fa fa-check" aria-hidden="true"></i> Thanks for contacting us! We\'ll be in touch shortly!</div>');
