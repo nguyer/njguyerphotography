@@ -105,8 +105,8 @@
                 <div class="col-xs-4"><img src="img/IMG_6089.jpg" alt="..." class="img-thumbnail"></div>
                 <div class="col-xs-4"><img src="img/IMG_2720.jpg" alt="..." class="img-thumbnail"></div>
 
-                <div class="col-xs-4"><img src="img/Viola_Sunset.jpg" alt="..." class="img-thumbnail"></div>
                 <div class="col-xs-4"><img src="img/IMG_6677.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><img src="img/IMG_3528.jpg" alt="..." class="img-thumbnail"></div>
                 <div class="col-xs-4"><img src="img/IMG_4861.jpg" alt="..." class="img-thumbnail"></div>
 
                 <div class="col-xs-4"><img src="img/IMG_4590.jpg" alt="..." class="img-thumbnail"></div>
@@ -206,7 +206,7 @@
                 <p>If you are interested in scheduling a photo shoot, please fill out this form. We'll get back to you as quick as we can!</p>
             </div>
             <div class="col-sm-6 col-sm-offset-3">
-              <form action="https://formspree.io/nguyer@gmail.com" method="POST">
+              <form id="contactForm">
                 <div class="form-group">
                   <label for="name">Full Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -250,6 +250,7 @@
                   <input type="hidden" name="_subject" value="Photography Session Booking" />
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                <div id="formResponse"></div>
               </form>
             <div>
         </div>
@@ -279,6 +280,23 @@
 
     <!-- Lightbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+
+    <script>
+      $('#contactForm').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'https://formspree.io/nguyer@gmail.com',
+            type:'post',
+            data:$('#contactForm').serialize(),
+            success:function(){
+              $('#formResponse').html('<div class="alert alert-success" role="alert"><i class="fa fa-check" aria-hidden="true"></i> Thanks for contacting us! We\'ll be in touch shortly!</div>');
+            },
+            error:function(){
+              $('#formResponse').html('<div class="alert alert-danger" role="alert"><i class="fa fa-times" aria-hidden="true"></i> Uh oh! Something went wrong when submitting the form. Sorry about that! Please try again later.</div>');
+            }
+        });
+      });
+    </script>
 
 </body>
 
