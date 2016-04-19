@@ -96,26 +96,26 @@
                     <h2>Portfolio</h2>
                 </div>
 
-                <div class="col-xs-4"><img src="img/IMG_3115-3.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_3640.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/Plowed_Field.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><a href="img/IMG_3115-3.jpg" data-toggle="lightbox"><img src="img/IMG_3115-3.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_3640.jpg" data-toggle="lightbox"><img src="img/IMG_3640.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/Plowed_Field.jpg" data-toggle="lightbox"><img src="img/Plowed_Field.jpg" alt="..." class="img-thumbnail"></a></div>
 
 
-                <div class="col-xs-4"><img src="img/IMG_6551.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_6089.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_2720.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><a href="img/IMG_6551.jpg" data-toggle="lightbox"><img src="img/IMG_6551.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_6089.jpg" data-toggle="lightbox"><img src="img/IMG_6089.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_2720.jpg" data-toggle="lightbox"><img src="img/IMG_2720.jpg" alt="..." class="img-thumbnail"></a></div>
 
-                <div class="col-xs-4"><img src="img/IMG_6677.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_3528.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_4861.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><a href="img/IMG_6677.jpg" data-toggle="lightbox"><img src="img/IMG_6677.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_3528.jpg" data-toggle="lightbox"><img src="img/IMG_3528.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_4861.jpg" data-toggle="lightbox"><img src="img/IMG_4861.jpg" alt="..." class="img-thumbnail"></a></div>
 
-                <div class="col-xs-4"><img src="img/IMG_4590.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_5245.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_4878.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><a href="img/IMG_4590.jpg" data-toggle="lightbox"><img src="img/IMG_4590.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_5245.jpg" data-toggle="lightbox"><img src="img/IMG_5245.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_4878.jpg" data-toggle="lightbox"><img src="img/IMG_4878.jpg" alt="..." class="img-thumbnail"></a></div>
 
-                <div class="col-xs-4"><img src="img/IMG_2722.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_5082.jpg" alt="..." class="img-thumbnail"></div>
-                <div class="col-xs-4"><img src="img/IMG_4885.jpg" alt="..." class="img-thumbnail"></div>
+                <div class="col-xs-4"><a href="img/IMG_2722.jpg" data-toggle="lightbox"><img src="img/IMG_2722.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_5082.jpg" data-toggle="lightbox"><img src="img/IMG_5082.jpg" alt="..." class="img-thumbnail"></a></div>
+                <div class="col-xs-4"><a href="img/IMG_4885.jpg" data-toggle="lightbox"><img src="img/IMG_4885.jpg" alt="..." class="img-thumbnail"></a></div>
 
 
             </div>
@@ -282,6 +282,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
 
     <script>
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+
       $('#contactForm').submit(function(e){
         e.preventDefault();
         var user = 'info';
