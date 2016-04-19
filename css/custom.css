@@ -1,9 +1,8 @@
 .grid-item { width: 200px; }
 .grid-item--width2 { width: 400px; }
 
-.logo {
-  height: 150px;
-  max-width: 100vh;
+header img {
+  max-width: 100%;
 }
 
 @media(min-width:768px) {
