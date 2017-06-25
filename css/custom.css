@@ -78,7 +78,7 @@ h4 {
 #packages ul {
   margin: auto;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   text-align: left;
 }
 
@@ -94,8 +94,12 @@ h4 {
 }
 
 .form-control {
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
+}
+
+.form-control:focus {
+  border-color: #f05;
 }
 
 footer {
@@ -106,4 +110,61 @@ footer {
   width: 150px;
   height: 150px;
   margin: 30px;
+}
+
+.footnote {
+  margin-top: 20px;
+}
+
+.new {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.top-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+}
+
+.accent-color {
+  color: #f05;
+}
+
+.border-accent {
+  border: 1px solid #f05;
+  border-radius: 5px;
+}
+
+#floating-banner {
+  position: fixed;
+  top: 5em;
+  right: 1em;
+  z-index: 100;
+  padding: 1em;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.btn {
+  border: 1px solid #f05;
+  border-radius: 5px;
+  color: #f05;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+
+.btn:hover{
+  color: #fff;
+  background-color: #f05;
+}
+
+.btn:active{
+  color: #fff;
+  background-color: transparent;
 }
